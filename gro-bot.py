@@ -19,7 +19,7 @@ message_number = 5
 fb_userid = "FB_USERID"
 send_delay = 60
 
-accessTokenUrl = "https://graph.facebook.com/oauth/access_token?client_id="+client_id+"&client_secret=16ebdba77e4d183f025bc1a2269d7fe1"+"&grant_type="+grant_type
+accessTokenUrl = "https://graph.facebook.com/oauth/access_token?client_id="+client_id+"&client_secret="+client_secret+"+"&grant_type="+grant_type
 oauth_response = urllib2.urlopen(accessTokenUrl).read()
 try:
     oauth_access_token = urlparse.parse_qs(str(oauth_response))['access_token'][0]
